@@ -9,7 +9,7 @@ fi;
 
 export ENV_NAME="$1"
 
-conda create -y -n $ENV_NAME ipykernel
+conda create -y -n $ENV_NAME ipykernel ipython_genutils
 source activate $ENV_NAME
 python -m ipykernel install --user --name $ENV_NAME
 jupyter --paths > /dev/null
